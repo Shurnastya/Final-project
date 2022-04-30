@@ -68,11 +68,30 @@
         <section class="promo">
             <div class="wrapper">
 
-                <img class="delivery" src="img/delivery.png" alt="Delivery">
-                <img class="delivery-shadow" src="img/delivery-shadow.png" alt="Delivery">
-                <img class="delivery-fon" src="img/delivery-fon.png" alt="Delivery">
-                <img class="delivery2" src="img/delivery2.png" alt="Delivery">
-                <img class="delivery-fon-shadow" src="img/delivery-fon-shadow.png" alt="Delivery">
+                <div class="my-slider">
+                    <ul>
+                        <li class="slider-1">
+                            <!-- <div class="slider-1"> -->
+                                <img class="delivery" src="img/delivery.png" alt="Delivery">
+                                <img class="delivery-shadow" src="img/delivery-shadow.png" alt="Delivery">
+                                <img class="delivery-fon" src="img/delivery-fon.png" alt="Delivery">
+                                <img class="delivery2" src="img/delivery2.png" alt="Delivery">
+                                <img class="delivery-fon-shadow" src="img/delivery-fon-shadow.png" alt="Delivery">
+                            <!-- </div> -->
+                        </li>
+
+                        <li class="slider-2">
+                        </li>
+
+                        <li class="slider-3">
+                        </li>
+
+                    </ul>
+
+                    <div class="btn-next btn"><span class="arrow-right"></div>
+                    <div class="btn-prev btn"><span class="arrow-left"></div>
+
+                </div>
 
             </div>
         </section>
@@ -473,16 +492,59 @@
                     </div>
                     <div class="block">
                         <span class="service"></span>
-                        <p>Хороший сервис</p>
+                        <p>Отличный сервис</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Карта API -->
+        <section class="block-map">
+            <div class="wrapper">
+
+                <div id="map" class="map"></div>
+
+                <div class="contact">
+                    <h2>Контакты</h2>
+
+                    <div class="adress">
+                        <p>Наш адрес:</p>
+                        <span class="location"></span>
+                        <h3>МО, городской округ Красногорск, село Ильинкое, Экспериментальная улица, 10</h3>
+                        <p>Наша почта:</p>
+                        <span class="messange"></span>
+                        <h3>auto.wash@gmail.com</h3>
+                    </div>
+
+                        <div class="booking">
+                            <a class="btn-booking" href="#">Забронировать стол</a>
+                            <div class="number">
+                                <h4>+7 (917) 510-57-59</h4>
+                                <p>Звоните или оставляйте заявку</p>
+                            </div>
+                        </div>
+
+                        <div class="social">
+                            <h3>Мы в соц.сетях:</h3>
+                            <div class="social-icon">
+                                <span class="fb"></span>
+                                <span class="vk"></span>
+                                <span class="youtube"></span>
+                                <span class="insta"></span>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Подвал -->
         <footer class="footer">
 
             <div class="wrapper">
+
+                <a class="up" href="#"></a>
 
                 <div class="logo-list">
                     <a href="#"><img src="img/logo.jpg" alt="Logo"></a>
@@ -500,5 +562,8 @@
         </footer>
 
     </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=2c620099-3058-40dc-9f0e-a61a5a1b2215&lang=ru_RU"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
