@@ -114,14 +114,6 @@ html, body {
 
 /* PROMO */
 
-/* .wrapper .my-slider .slider-1{
-    background-image: url('../img/promo1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 585px;
-    position: relative;
-} */
-
 .delivery {
     position: absolute;
     top: 140px;
@@ -155,54 +147,28 @@ html, body {
 }
 
 /* SLIDER */
-.my-slider {
+
+.promo .wrapper {
     position: relative;
-    overflow: hidden;
-    transition: transform 3s ease;
-}
-
-.my-slider ul {
-    list-style: none;
-    display: flex;
-    transition: transform 3s ease;
-}
-
-.my-slider ul li{
-    flex: none;
     width: 100%;
-    height: 200px;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slider-line {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    transition: all ease 1s;
 }
 
-.my-slider ul .slider-1 {
-    background-image: url('../img/promo1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 585px;
-}
-
-.my-slider ul .slider-2 {
-    background-image: url('../img/slider-2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 585px;
-}
-
-.my-slider ul .slider-3 {
-    background-image: url('../img/slider-3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 585px;
-}
 
 .btn {
-    width: 70px;
-    height: 70px;
+    width: 55px;
+    height: 55px;
     font-size: 30px;
     background: rgb(135 135 135 / 61%);
+    border: none;
     border-radius: 50%;
     position: absolute;
     top: calc(50% - 25px);
@@ -212,28 +178,37 @@ html, body {
     cursor: pointer;
 }
 
-.btn-prev {
+.btn:hover {
+    background: rgba(72, 136, 72, 0.61);
+    transition: 0.3s;
+}
+
+.slider-prev {
     left: 10px;
 }
 
-.btn-next {
+.slider-next {
     right: 10px;
 }
 
 .arrow-right {
-    width: 35px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     display: block;
-    background-image: url(../img/arrow-right.svg);
+    background-image: url(../img/arrow-r.svg);
     background-repeat: no-repeat;
+    left: 6px;
+    position: absolute;
 }
 
 .arrow-left {
-    width: 35px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     display: block;
-    background-image: url(../img/arrow-left.svg);
+    background-image: url(../img/arrow-l.svg);
     background-repeat: no-repeat;
+    left: 3px;
+    position: absolute;
 }
 
 /* NAVIGATION MENU */
@@ -315,7 +290,7 @@ html, body {
 }
 
 .cart-product:hover{
-    transform: scale(1.03);
+    transform: scale(1.01);
     box-shadow: 6px 11px 5px #1a1a1a;
 }
 
@@ -652,6 +627,11 @@ html, body {
     margin-right: 15px;
 }
 
+.btn-booking:hover {
+    border: 1px solid #a4db85;
+    transition: 0.3s;
+}
+
 .social {
     display: flex;
     justify-content: space-evenly;
@@ -726,30 +706,25 @@ html, body {
 /* FOOTER */
 
 .footer {
-    background: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%)
+    background: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%);
 }
 
 .footer .wrapper {
     display: flex;
     align-items: center;
-}
-
-.footer .logo-list {
-    margin-top: 15px;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
 .footer-info a {
-    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
 }
 
-.footer .logo-list {
-    width: 20%;
-    text-align: center;
+.footer img {
+    width: 170px;
+    margin: 15px 0;
 }
 
 .footer p {
@@ -782,7 +757,7 @@ html, body {
 .conditions-delivery {
     border-top: 1px solid #808080;
 }
-.conditions-delivery h2 {
+.header-delivery h2 {
     color: #FFFFFF;
     font-size: 32px;
     text-transform: uppercase;
@@ -815,3 +790,56 @@ html, body {
     width: 50%;
     margin-bottom: 40px;
 }
+
+/* ACCORDION */
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.row>* {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.accordion-flush .accordion-item .accordion-button {
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.accordion-flush .accordion-item {
+    background-color: #2a2a2a;
+}
+
+.accordion-body {
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.accordion-button {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-radius: 10px;
+}
+
+/* END Страница доставки */

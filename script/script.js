@@ -27,50 +27,53 @@ function init() {
 ymaps.ready(init);
 
 // Slider
-const slider = function (className){
-    let container = document.querySelector(className)
-    let ul = container.querySelector('ul');
-    if(!ul) return;
+function slider (){
+    const image = document.querySelectorAll('.slider .slider-line img');
+    const sliderLine = document.querySelector('.slider-line');
+    let count = 0;
+    let width;
 
-    let slideItems = ul.querySelectorAll('li');
-    if(!slideItems || !(slideItems.length > 1)) return;
+    function initi(){
 
-    const next = function (e){
-        let saveNext = e.target.classList.contains('btn-next') ? 'next' : 'prev';
-        // let saveNext = '';
-        // if(e.target.classList.contains('btn-next')){
-        //     saveNext = 'next';
-        // }else{
-        //     saveNext = 'prev';
-        // }
+        width = document.querySelector('.slider-line').offsetWidth;
+        sliderLine.getElementsByClassName.width = width*image.length + 'px';
+        image.forEach(item => {
+            item.style.width = width + 'px';
+            item.style.height = 'auto';
+        });
 
-        let x = ul.style.transform || '0';
-        x = x.replace('translateX(', '');
-        x = x.replace(')', '');
-        x = Math.abs(parseInt(x));
-
-        if(saveNext === 'next'){
-            if(x < ((slideItems.length * 100) - 100)){
-                x += 100;
-            }else {
-                x = 0;
-            };
-        };
-        if(saveNext === 'prev'){
-            if(x > 0){
-                x -= 100;
-            }else{
-                x = (slideItems.length * 100) - 100;
-            }
-        };
-
-
-        ul.style.transform = `translateX(-${x}%)`
-        console.log(ul.style.transform);
+        rollSlider();
     };
 
-    let btns = document.querySelectorAll('.btn');
-    btns.forEach(btn => btn.addEventListener('click', next));
+    window.addEventListener('resize', initi);
+    initi();
+
+    document.querySelector('.slider-prev').addEventListener('click', function(){
+
+        count--;
+        if (count < 0 ){
+            count = image.length -1;
+        }
+        rollSlider();
+
+    });
+
+    document.querySelector('.slider-next').addEventListener('click', function(){
+
+        count++;
+        if (count >= image.length){
+            count = 0;
+        }
+        rollSlider();
+
+    });
+
+    function rollSlider(){
+        sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+    };
+
 };
 
-slider('.my-slider');
+slider();
+
+//Popup
