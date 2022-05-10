@@ -59,7 +59,9 @@ html, body {
 
 .icon {
     position: relative;
-    margin-right: 10px;
+    margin-right: 15px;
+    -webkit-animation: swing 1.5s infinite;
+    animation: swing 1.5s infinite;
 }
 
 .round-phone {
@@ -300,6 +302,7 @@ html, body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 10px;
+    /* transition: all 0.3s ease-out; */
 }
 
 .cart-product .shopping-product {
@@ -589,6 +592,8 @@ html, body {
     position: absolute;
     left: 65px;
     top: 116px;
+    -webkit-animation: pulsing 2s infinite;
+    animation: pulsing 2s infinite;
 }
 
 .messange {
@@ -600,6 +605,8 @@ html, body {
     position: absolute;
     left: 65px;
     top: 193px;
+    -webkit-animation: pulsing 2s infinite;
+    animation: pulsing 2s infinite;
 }
 
 .booking {
@@ -629,6 +636,7 @@ html, body {
 
 .btn-booking:hover {
     border: 1px solid #a4db85;
+    color: #ffffff;
     transition: 0.3s;
 }
 
@@ -660,6 +668,7 @@ html, body {
 .fb:hover {
     background-image: url(../img/fb-green.svg);
     transition: 0.2s;
+    transform: scale(1.2);
 }
 
 .vk {
@@ -674,6 +683,7 @@ html, body {
 .vk:hover {
     background-image: url(../img/vk-green.svg);
     transition: 0.2s;
+    transform: scale(1.2);
 }
 
 .youtube {
@@ -688,6 +698,7 @@ html, body {
 .youtube:hover {
     background-image: url(../img/youtube-green.svg);
     transition: 0.2s;
+    transform: scale(1.2);
 }
 
 .insta {
@@ -701,6 +712,7 @@ html, body {
 .insta:hover {
     background-image: url(../img/insta-green.svg);
     transition: 0.2s;
+    transform: scale(1.2);
 }
 
 /* FOOTER */
@@ -757,6 +769,7 @@ html, body {
 .conditions-delivery {
     border-top: 1px solid #808080;
 }
+
 .header-delivery h2 {
     color: #FFFFFF;
     font-size: 32px;
@@ -779,6 +792,7 @@ html, body {
 
 .schedule {
     display: flex;
+    margin-bottom: 30px;
 }
 
 .schedule-delivery {
@@ -789,6 +803,11 @@ html, body {
 .order {
     width: 50%;
     margin-bottom: 40px;
+}
+
+.conditions-delivery .map {
+    width: 580px;
+    height: 545px;
 }
 
 /* ACCORDION */
@@ -810,6 +829,7 @@ ul {
 .accordion-flush .accordion-item .accordion-button {
     border-radius: 10px;
     color: #ffffff;
+    padding: 25px;
 }
 
 .accordion-flush .accordion-item {
@@ -820,6 +840,7 @@ ul {
     background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
     border-radius: 10px;
     color: #ffffff;
+    padding: 25px;
 }
 
 .accordion-button {
@@ -843,3 +864,65 @@ ul {
 }
 
 /* END Страница доставки */
+
+/* Страница Акции */
+
+.sale {
+    margin-bottom: 100px;
+}
+
+.sale .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 70px;
+}
+
+.conditions-sale {
+    border-top: 1px solid #808080;
+}
+
+.header-sale h2 {
+    color: #FFFFFF;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    border-left: 3px solid #84ca8e;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+
+.promo-sale {
+    width: 400px;
+    height: 395px;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+
+.promo-sale:hover {
+    transform: scale(1.01);
+    box-shadow: 6px 11px 5px #1a1a1a;
+    background: #142b18;
+}
+
+.promo-sale img {
+    width: 400px;
+}
+
+.promo-sale h2 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.promo-sale p {
+    font-size: 14px;
+    color: #A6A7AB;
+    margin-bottom: 10px;
+}
+
+.info-sale {
+    padding: 25px 25px 10px 25px;
+}
