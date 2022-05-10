@@ -1,4 +1,3 @@
-// Slider
 export default function slider (){
     const image = document.querySelectorAll('.slider .slider-line img');
     const sliderLine = document.querySelector('.slider-line');

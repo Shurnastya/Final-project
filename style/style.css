@@ -307,6 +307,7 @@ html, body {
 
 .cart-product .shopping-product {
     color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     font-size: 14px;
     background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
@@ -766,11 +767,11 @@ html, body {
 
 /* Страница доставки */
 
-.conditions-delivery {
+.general-container {
     border-top: 1px solid #808080;
 }
 
-.header-delivery h2 {
+.main h2 {
     color: #FFFFFF;
     font-size: 32px;
     text-transform: uppercase;
@@ -879,20 +880,6 @@ ul {
     grid-row-gap: 70px;
 }
 
-.conditions-sale {
-    border-top: 1px solid #808080;
-}
-
-.header-sale h2 {
-    color: #FFFFFF;
-    font-size: 32px;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    border-left: 3px solid #84ca8e;
-    padding: 0 20px;
-    margin-top: 50px;
-}
-
 .promo-sale {
     width: 400px;
     height: 395px;
@@ -925,4 +912,73 @@ ul {
 
 .info-sale {
     padding: 25px 25px 10px 25px;
+}
+
+/* Корзина */
+
+.card-delete, .counter-btn {
+    width: 30px;
+    height: 30px;
+    background: #72A479;
+    border-radius: 50%;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-delete:hover {
+    background: #354b37;
+}
+
+.counter-btn:hover {
+    background: #354b37;
+}
+
+.cart .card {
+    display: flex;
+    flex-direction: initial;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card .card-info h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.card p {
+    font-size: 12px;
+    color: #A6A7AB;
+}
+
+.card-info {
+    width: 600px;
+}
+
+.card img {
+    width: 120px;
+    height: 85px;
+    margin: 25px 0 25px 0;
+}
+
+.counter-value {
+    width: 40px;
+    background: border-box;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
 }
