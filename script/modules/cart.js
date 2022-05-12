@@ -17,7 +17,7 @@ function cardInit (){
             </div>
             <div class="counter">
                 <button class="counter-btn" data-direction="minus">-</button>
-                <input type="text" value="0" class="counter-value"></input>
+                <input type="text" value="1" class="counter-value">
                 <button class="counter-btn" data-direction="plus">+</button>
             </div>
             <h3>${price}</h3>
@@ -41,11 +41,13 @@ function cardInit (){
             if (direction === 'plus') {
                 newValue = currentValue + 1;
             } else {
-                newValue = currentValue - 1 > 0 ? currentValue - 1 : 0;
+                newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
             };
 
             inp.value = newValue;
+
         });
+
     });
 
 };

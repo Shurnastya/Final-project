@@ -17,6 +17,7 @@
 
     <div class="site">
 
+        <!-- Шапка -->
         <header class="header">
             <div class="wrapper">
 
@@ -49,15 +50,133 @@
             </div>
         </header>
 
+        <!-- Карточка товаров -->
         <div class="general-container">
             <div class="wrapper">
-                <div class="main">
-                    <h2>Корзина</h2>
+
+                <div class="container">
+                    <div class="main">
+                        <h2>Корзина</h2>
+                    </div>
+                    <div class="cart"></div>
                 </div>
-                <div class="cart"></div>
+
+                <div class="container-total">
+                    <div class="total">
+                        <h2>Итого: </h2>
+                        <button class="btn-delivery" id="popup-open"><a href="#">Офорпить заказ</a></button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
+        <!-- Popup -->
+        <div class="wrapper">
+
+            <div class="popup" id="popup">
+                <div class="popup-container">
+                    <div class="popup-body" id="popup-body">
+                        <div class="main">
+                            <h2>Оформление заказа</h2>
+                        </div>
+
+                        <div class="popup-blocks">
+
+                            <div class="block-1">
+
+                                <div class="contact-info">
+                                    <p>1. Контактная информация</p>
+                                    <form action="">
+                                        <input type="text" class="contact-input" placeholder="Имя">
+                                        <input type="text" class="contact-input" placeholder="Телефон">
+                                    </form>
+                                </div>
+
+                                <div class="contact-info">
+                                    <p>2. Доставка</p>
+                                    <div class="btn-delivery-card">
+                                        <div class="btn-container">
+                                            <button class="button-delivery btn-border-l">Доставка</button>
+                                            <button class="button-delivery btn-border-r">Самовывоз</button>
+                                        </div>
+                                        <div class="clock">
+                                            <span class="clock-delivery"></span><p>Доставим через 1 час 30 минут</p>
+                                        </div>
+                                    </div>
+                                    <div class="adress-delivery">
+                                        <p>Адрес доставки</p>
+                                        <form action="" class="adress-form">
+                                            <input type="text" class="street" placeholder="Укажите улицу">
+                                            <input type="text" placeholder="Номер дома">
+                                            <input type="text" placeholder="&#8470 квартиры/офиса">
+                                            <input type="text" placeholder="Подъезд">
+                                            <input type="text" placeholder="Этаж">
+                                            <input type="text" class="comment" placeholder="Комментарий">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-2">
+
+                                <div class="contact-info">
+                                    <p>3. Оплатить</p>
+                                    <div class="btn-container pay">
+                                        <button class="button-delivery btn-border-l">Оплата онлайн</button>
+                                        <button class="button-delivery">Курьеру картой</button>
+                                        <button class="button-delivery btn-border-r">Наличными</button>
+                                    </div>
+                                    <input type="text" class="input-pay" placeholder="Сдача с:"></input>
+                                </div>
+
+                                <div class="contact-info">
+                                    <p>4. Когда доставить</p>
+                                    <div class="btn-container">
+                                            <button class="button-delivery btn-border-l">В ближайшее время</button>
+                                            <button class="button-delivery btn-border-r">Ко времени</button>
+                                        <div class="input-container">
+                                            <input type="text" class="input-pay" placeholder="Укажите время"></input>
+                                        </div>
+                                    </div>
+
+                                    <div class="quantity">
+                                        <p>Кол-во персон:</p>
+                                        <div id="quantity"></div>
+                                    </div>
+                                    
+                                    <div class="call-back">
+                                        <p>Хотите мы перезвоним?</p>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="call-back" class="radio-input input-r" id="radio-1"><label class="radio-label" for="radio-1">Не перезванивать</label>
+                                        </div>
+                                        <div class="radio-input-container">
+                                            <input type="radio" name="call-back" class="radio-input input-r" id="radio-2"><label class="radio-label" for="radio-2">Потребуется звонок оператора</label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="popup-order">
+                            <div class="checkbox">
+                                <input type="checkbox" class="checkbox-input" id="checkbox-1"><label for="checkbox-1" class="checkbox-label">Я согласен на обработку моих перс. данных в соответствии с <a href="#">Условиями</a></label>
+                            </div>
+                            <button class="popup-delivery">Оформить заказ</button>
+                        </div>
+
+                        <div class="popup-close" id="popup-close">&#10006</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Подвал -->
         <footer class="footer">
 
             <div class="wrapper">
@@ -79,5 +198,6 @@
 
     </div>
     <script src="../script/modules/cart.js" type="module"></script>
+    <script src="../script/modules/popup-card.js" type="module"></script>
 </body>
 </html>

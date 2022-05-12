@@ -801,9 +801,29 @@ html, body {
     margin-bottom: 40px;
 }
 
+.schedule-delivery h3 {
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.schedule-delivery p {
+    font-size: 22px;
+    color: #CFCFCF;
+}
+
 .order {
     width: 50%;
     margin-bottom: 40px;
+}
+
+.order h3 {
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.order p {
+    font-size: 22px;
+    color: #CFCFCF;
 }
 
 .conditions-delivery .map {
@@ -965,7 +985,7 @@ ul {
 }
 
 .card-info {
-    width: 600px;
+    width: 500px;
 }
 
 .card img {
@@ -982,3 +1002,396 @@ ul {
     text-align: center;
     font-size: 20px;
 }
+
+.general-container .container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.btn-delivery {
+    text-align: center;
+    font-size: 14px;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 53px;
+}
+
+.btn-delivery a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.container-total {
+    display: flex;
+    justify-content: center;
+}
+
+.total {
+    display: flex;
+    width: 760px;
+    height: 105px;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.total h2 {
+    font-size: 20px;
+    color: #A6A7AB;
+}
+
+/* Popup в корзине */
+.popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transform: translateY(-44.5%) scale(0);
+    transition: 0.4s ease-in-out;
+    z-index: 5;
+}
+
+.popup.active {
+    transform: translateY(0%) scale(100%);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.popup-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.popup-body {
+    margin: auto;
+    background: #403C3B;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup-body .main h2 {
+    margin: 20px;
+}
+
+.popup-body p {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.popup-blocks {
+    display: flex;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-body input {
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 8px;
+}
+
+.popup-body input:focus {
+    outline: none;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background: #72A479;
+    border-radius: 50%;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.popup-close:hover {
+    background: rgb(53, 75, 55);
+}
+
+.contact-info {
+    margin: 10px 20px 10px 20px;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.contact-input {
+    width: 49%;
+}
+
+.popup-delivery {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 53px;
+}
+
+.popup-delivery:hover {
+    background: rgb(53, 75, 55);
+}
+
+.button-delivery {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border: 1px solid #72A479;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 53px;
+}
+
+.button-delivery:hover {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+}
+
+.btn-border-l {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.btn-border-r {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn-delivery-card {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.btn-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+}
+
+.clock-delivery {
+    display: block;
+    background-image: url(../img/clock-delivery.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.btn-delivery-card p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 53%;
+    height: 53px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 15px;
+}
+
+.quantity p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.counter-btn-quantity {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: #ffffff;
+}
+
+.quantity input {
+    border: none;
+    background: none;
+}
+
+.adress-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.adress-form input {
+    width: 100%;
+}
+
+.adress-form .street {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.adress-form .comment {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.pay {
+    margin-bottom: 15px;
+}
+
+.input-pay {
+    width: 155px;
+    height: 53px;
+}
+
+.call-back p {
+    margin-bottom: 5px;
+}
+
+label {
+    color: #ffffff;
+}
+
+.input-r {
+    margin-right: 10px;
+}
+
+.popup-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 10px 15px;
+}
+
+.checkbox a{
+    color:  rgba(114, 164, 121, 1);
+}
+
+/* Checkbox */
+.checkbox {
+    position: relative;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-label {
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox-label::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #585858;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.checkbox-label::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/Check.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    opacity: 0;
+}
+
+.checkbox-input:checked + .checkbox-label::after {
+    opacity: 1;
+}
+
+/* Radio */
+.radio-input-container {
+    position: relative;
+}
+
+.radio-input {
+    display: none;
+}
+
+.radio-label {
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.radio-label::before {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    cursor: pointer;
+}
+
+.radio-label::after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(114, 164, 121, 1);
+    opacity: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    cursor: pointer;
+}
+
+.radio-input:checked + .radio-label::before {
+    border: 1px solid rgba(114, 164, 121, 1);
+}
+
+.radio-input:checked + .radio-label::after {
+    opacity: 1;
+}
+
+/* END POPUP */
