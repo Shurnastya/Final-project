@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
             <div class="wrapper">
 
                 <div class="logo-list">
-                    <a href="#"><img src="../img/logo.jpg" alt="Logo"></a>
+                    <a href="../index.html"><img src="../img/logo.jpg" alt="Logo"></a>
                 </div>
 
                 <nav class="nav">
@@ -45,9 +45,28 @@
                     </div>
                 </div>
 
-                <a class="shopping-card" href="./cart.html">Корзина</a>
+                <a class="shopping-card" href="./cart.html"><p>Корзина</p><div class="card-widget"></div></a>
 
             </div>
+
+            <!-- Burger menu -->
+        <div class="hidden-menu">
+            <input type="checkbox">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            
+            <div class="header__toggle-menu" >
+                <nav class="nav-toggle">
+                    <ul>
+                        <li><a href="./index.html">О ресторане</a></li>
+                        <li><a href="./pages/delivery.html">Условия доставки</a></li>
+                        <li><a href="./pages/sale.html">Акции</a></li>
+                    </ul>
+                </nav>
+            </div>                
+        </div>
+        
         </header>
 
         <!-- Карточка товаров -->
@@ -64,7 +83,7 @@
                 <div class="container-total">
                     <div class="total">
                         <h2>Итого: </h2>
-                        <button class="btn-delivery" id="popup-open"><a href="#">Офорпить заказ</a></button>
+                        <button class="btn-delivery" id="popup-open">Оформить заказ</button>
                     </div>
                 </div>
 
@@ -87,7 +106,7 @@
 
                                 <div class="contact-info">
                                     <p>1. Контактная информация</p>
-                                    <form action="">
+                                    <form>
                                         <input type="text" class="contact-input" placeholder="Имя">
                                         <input type="text" class="contact-input" placeholder="Телефон">
                                     </form>
@@ -106,10 +125,10 @@
                                     </div>
                                     <div class="adress-delivery">
                                         <p>Адрес доставки</p>
-                                        <form action="" class="adress-form">
+                                        <form class="adress-form">
                                             <input type="text" class="street" placeholder="Укажите улицу">
                                             <input type="text" placeholder="Номер дома">
-                                            <input type="text" placeholder="&#8470 квартиры/офиса">
+                                            <input type="text" placeholder="&#8470; квартиры/офиса">
                                             <input type="text" placeholder="Подъезд">
                                             <input type="text" placeholder="Этаж">
                                             <input type="text" class="comment" placeholder="Комментарий">
@@ -127,7 +146,12 @@
                                         <button class="button-delivery">Курьеру картой</button>
                                         <button class="button-delivery btn-border-r">Наличными</button>
                                     </div>
-                                    <input type="text" class="input-pay" placeholder="Сдача с:"></input>
+                                    <form>
+                                        <div class="input-pay">
+                                            <p>Сдача с:</p>
+                                            <input type="text">
+                                        </div>
+                                    </form>
                                 </div>
 
                                 <div class="contact-info">
@@ -135,9 +159,9 @@
                                     <div class="btn-container">
                                             <button class="button-delivery btn-border-l">В ближайшее время</button>
                                             <button class="button-delivery btn-border-r">Ко времени</button>
-                                        <div class="input-container">
-                                            <input type="text" class="input-pay" placeholder="Укажите время"></input>
-                                        </div>
+                                        <form class="input-container">
+                                            <input type="text" class="input-pay" placeholder="Укажите время">
+                                        </form>
                                     </div>
 
                                     <div class="quantity">
@@ -169,7 +193,7 @@
                             <button class="popup-delivery">Оформить заказ</button>
                         </div>
 
-                        <div class="popup-close" id="popup-close">&#10006</div>
+                        <div class="popup-close" id="popup-close">&#10006;</div>
                     </div>
                 </div>
             </div>
@@ -183,8 +207,8 @@
 
                 <a class="up" href="#"></a>
 
-                    <a href="#"><img src="../img/logo.jpg" alt="Logo"></a>
-                    <p>&copy ООО СК &laquoАПШЕРОН&raquo Все права защищены. 2010-2022</p>
+                    <a href="../index.html"><img src="../img/logo.jpg" alt="Logo"></a>
+                    <p>&copy; ООО СК &laquo;АПШЕРОН&raquo; Все права защищены. 2010-2022</p>
 
                 <div class="footer-info">
                     <a href="#">Пользовательское соглашение</a>
@@ -197,6 +221,7 @@
         </footer>
 
     </div>
+
     <script src="../script/modules/cart.js" type="module"></script>
     <script src="../script/modules/popup-card.js" type="module"></script>
 </body>

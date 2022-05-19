@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@
             <div class="wrapper">
                
                 <div class="logo-list">
-                    <a href="#"><img src="img/logo.jpg" alt="Logo"></a>
+                    <a href="./index.html"><img src="img/logo.jpg" alt="Logo"></a>
                 </div>
 
                     <nav class="nav">
@@ -31,23 +31,24 @@
                         </ul>
                     </nav>
 
-                <div class="contacts">
-                    <div class="icon">
-                        <a href="#"><span class="round-phone"></span></a>
-                        <a href="#"><span class="phone"></span></a>
+                    <div class="contacts">
+                        <div class="icon">
+                            <a href="#"><span class="round-phone"></span></a>
+                            <a href="#"><span class="phone"></span></a>
+                        </div>
+
+                        <div class="number">
+                            <p>Контакты:</p>
+                            <h3> +7 (917) 510-57-59</h3>
+                        </div>
                     </div>
 
-                    <div class="number">
-                        <p>Контакты:</p>
-                        <h3> +7 (917) 510-57-59</h3>
-                    </div>
-                </div>
-
-                <a class="shopping-card" href="./pages/cart.html">Корзина</a>
+                    <a class="shopping-card" href="./pages/cart.html"><p>Корзина</p><div class="card-widget"></div></a>
 
             </div>
 
-            <!-- <div class="hidden-menu">
+            <!-- Burger menu -->
+            <div class="hidden-menu">
                 <input type="checkbox">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -56,18 +57,18 @@
                 <div class="header__toggle-menu" >
                     <nav class="nav-toggle">
                         <ul>
-                            <li><a href="#">О ресторане</a></li>
-                            <li><a href="#">Условия доставки</a></li>
-                            <li><a href="#">Акции</a></li>
-                            
+                            <li><a href="./index.html">О ресторане</a></li>
+                            <li><a href="./pages/delivery.html">Условия доставки</a></li>
+                            <li><a href="./pages/sale.html">Акции</a></li>
                         </ul>
                     </nav>
                 </div>                
-            </div> -->
+            </div>
+
         </header>
 
         <!-- Слайдер -->
-        <section class="promo">
+        <div class="promo">
             <div class="wrapper">
 
                 <div class="slider">
@@ -84,9 +85,9 @@
                 <button class="btn slider-next"><span class="arrow-right"></span></button>
 
             </div>
-        </section>
+        </div>
 
-        <section class="menu">
+        <div class="menu">
             <div class="wrapper">
 
                 <nav class="nav-menu">
@@ -101,13 +102,13 @@
                 </nav>
 
             </div>
-        </section>
+        </div>
 
         <!-- Холодные закуски -->
         <section class="appetizers">
             <div class="wrapper">
 
-                <h2><a name="cold">Холодные закуски</a></h2>
+                <h2><a id="cold">Холодные закуски</a></h2>
                 <div class="container">
                     <div class="cart-product">
                         <img src="img/coldappetizers1.jpg" alt="cold">
@@ -117,7 +118,7 @@
                             <p class="weight">Вес: 225г</p>
                             <p class="description">Бутерброды из гренок, с начинкой (креветки, сыр, салат), насаженные на шпажки.</p>
                             <h3>20 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -129,7 +130,7 @@
                             <p class="weight">Вес: 165г</p>
                             <p class="description">Салат «Ромен» с креветкой, шпинат, апельсин, авокадо, заправка из лемонграсса.</p>
                             <h3>15 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -141,7 +142,7 @@
                             <p class="weight">Вес: 330г</p>
                             <p class="description">Перец, огурец, помидор, маслины, редис, петрушка, укроп, соль, лук, сыр, хлеб.</p>
                             <h3>15 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -153,7 +154,7 @@
                             <p class="weight">Вес: 310г</p>
                             <p class="description">Ветчина, салями, балык, бекон, рулетики из ветчины с хреном, сало, гренки из чёрного хлеба.</p>
                             <h3>19 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -166,7 +167,7 @@
         <section class="appetizers">
             <div class="wrapper">
 
-                <h2><a name="hot">Горячие закуски</a></h2>
+                <h2><a id="hot">Горячие закуски</a></h2>
                 <div class="container">
                     <div class="cart-product">
                         <img src="img/hot1.jpg" alt="hot">
@@ -176,7 +177,7 @@
                             <p class="weight">Вес: 210г</p>
                             <p class="description">Блинчик, икра лососёвая.</p>
                             <h3>25 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -188,7 +189,7 @@
                             <p class="weight">Вес: 200г</p>
                             <p class="description">Филе куриное, специи.</p>
                             <h3>11 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -200,7 +201,7 @@
                             <p class="weight">Вес: 230г</p>
                             <p class="description">Жареный сыр.</p>
                             <h3>14 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -212,7 +213,7 @@
                             <p class="weight">Вес: 370г</p>
                             <p class="description">Крылья куриные, соус «BBQ», специи.</p>
                             <h3>14 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -225,7 +226,7 @@
         <section class="appetizers">
             <div class="wrapper">
 
-                <h2><a name="meat">Мясные закуски</a></h2>
+                <h2><a id="meat">Мясные закуски</a></h2>
                 <div class="container">
                     <div class="cart-product">
                         <img src="img/meat1.jpg" alt="mean">
@@ -235,7 +236,7 @@
                             <p class="weight">Вес: 400г</p>
                             <p class="description">Свинина, тушёная капуста, картофель, аджика.</p>
                             <h3>19 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -247,7 +248,7 @@
                             <p class="weight">Вес: 330г</p>
                             <p class="description">Язык говяжий, вино, помидоры, картофель пай, коньяк.</p>
                             <h3>32 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -259,7 +260,7 @@
                             <p class="weight">Вес: 780г</p>
                             <p class="description">Колбаска свиная, колбаска печёночная, колбаска картофельная с беконом.</p>
                             <h3>43 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -271,7 +272,7 @@
                             <p class="weight">Вес: 980г</p>
                             <p class="description">Свиная рулька, пиво, картофель, капуста тушёная, овощи маринованные.</p>
                             <h3>45 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -284,7 +285,7 @@
         <section class="appetizers">
             <div class="wrapper">
 
-                <h2><a name="fish">Рыбные блюда</a></h2>
+                <h2><a id="fish">Рыбные блюда</a></h2>
                 <div class="container">
                     <div class="cart-product">
                         <img src="img/fish1.jpg" alt="fich">
@@ -294,7 +295,7 @@
                             <p class="weight">Вес: 330г</p>
                             <p class="description">Форель, сёмга слабосолёная, скумбрия, лимон, масло, зелень.</p>
                             <h3>32 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -306,7 +307,7 @@
                             <p class="weight">Вес: 340г</p>
                             <p class="description">Рыба на овощном соте с грушей, горчица.</p>
                             <h3>22 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -318,7 +319,7 @@
                             <p class="weight">Вес: 345г</p>
                             <p class="description">Лосось с сыром "Моцарелла", маринад, горчица.</p>
                             <h3>27 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -330,7 +331,7 @@
                             <p class="weight">Вес: 220г</p>
                             <p class="description">"Филадельфия с дайконом". Лосось, сливочный сыр, дайкон.</p>
                             <h3>10 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -343,7 +344,7 @@
         <section class="appetizers">
             <div class="wrapper">
 
-                <h2><a name="gril">Гриль меню</a></h2>
+                <h2><a id="gril">Гриль меню</a></h2>
                 <div class="container">
                     <div class="cart-product">
                         <img src="img/gril1.jpg" alt="fich">
@@ -353,7 +354,7 @@
                             <p class="weight">Вес: 2000г</p>
                             <p class="description">Свинина, картофель, лук, болгарский перец, чеснок, зелень.</p>
                             <h3>49 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -365,7 +366,7 @@
                             <p class="weight">Вес: 1330г</p>
                             <p class="description">Шашлык из свинины 500 г, крылья куриные 500 г, лаваш 80 г, соус 50 г.</p>
                             <h3>41 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -377,7 +378,7 @@
                             <p class="weight">Вес: 1000г</p>
                             <p class="description">1 кг куриного шашлыка (разные части), лаваш.</p>
                             <h3>39 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -389,7 +390,7 @@
                             <p class="weight">Вес: 1000г</p>
                             <p class="description">Плов "Узбекский". Бедро куриное, рис, морковь, лук, зелень.</p>
                             <h3>21 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
 
@@ -402,7 +403,7 @@
         <section class="appetizers">
             <div class="wrapper">
         
-                <h2><a name="drink">Напитки</a></h2>
+                <h2><a id="drink">Напитки</a></h2>
                 <div class="container">
                     <div class="cart-product">
                         <img src="img/drink1.jpg" alt="fich">
@@ -412,7 +413,7 @@
                             <p class="weight">Вес: 200мл</p>
                             <p class="description">Грейпфрут, апельсин, лед.</p>
                             <h3>7 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
         
@@ -424,7 +425,7 @@
                             <p class="weight">Вес: 200млг</p>
                             <p class="description">Клюква, лимонная кислота, лед.</p>
                             <h3>2 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
         
@@ -436,7 +437,7 @@
                             <p class="weight">Вес: 200мл</p>
                             <p class="description">Черный/зеленый/каркаде.</p>
                             <h3>2 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
         
@@ -448,7 +449,7 @@
                             <p class="weight">Вес: 200мл</p>
                             <p class="description">Эспрессо/Американо/Капусино/Латте.</p>
                             <h3>5 BYN</h3>
-                            <button class="shopping-product" href="#">В корзину<span class="icon-card"></span></button>
+                            <button class="shopping-product">В корзину<span class="icon-card"></span></button>
                         </div>
                     </div>
         
@@ -464,7 +465,9 @@
                 <div class="container">
                     <h2>Наше кафе</h2>
                     <p>Мы расположены в одном из самых живописных мест города — на берегу реки, это ваш оазис в черте города, куда можно сбежать от шумного и пыльного мегаполиса. Мы, действительно уникальные, ведь все продумано до мелочей: проект построен из дикого закарпатского сруба, камин в основном зале ресторана и панорамные окна с видом на реку, уютные беседки на берегу реки и лучшая видовая террасса, шатер с посадкой на 200 человек, сказочный детский домик и бассейн.</p>
-                    <a class="btn-menu" href="#">Посмотреть меню</a>
+                    <div class="btn-menu-container">
+                        <a class="btn-menu" href="#">Посмотреть меню</a>
+                    </div>
                 </div>
 
                 <div class="blocks">
@@ -536,8 +539,8 @@
 
                 <a class="up" href="#"></a>
 
-                    <a href="#"><img src="img/logo.jpg" alt="Logo"></a>
-                    <p>&copy ООО СК &laquoАПШЕРОН&raquo Все права защищены. 2010-2022</p>
+                    <a href="./index.html"><img src="img/logo.jpg" alt="Logo"></a>
+                    <p>&copy; ООО СК &laquo;АПШЕРОН&raquo; Все права защищены. 2010-2022</p>
 
                 <div class="footer-info">
                     <a href="#">Пользовательское соглашение</a>

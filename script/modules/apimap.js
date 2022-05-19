@@ -1,14 +1,14 @@
 export default function init() {
     let map = new ymaps.Map('map', {
-        center: [53.90193024244387,27.553482824081406],
+        center: [53.90193115887527,27.554072732139808],
         zoom: 17
     });
 
     let placemark = new ymaps.Placemark([53.90210688053431,27.555478152444977], {}, {
-        // iconLayout: 'default#image',
-        // iconImageHref: '../img/marker.png',
-        // iconImageSize: [40, 40],
-        // iconImageOffset: [0, 0]
+         iconLayout: 'default#image',
+         iconImageHref: '../../img/marker.png',
+         iconImageSize: [90, 100],
+         iconImageOffset: [-45, -70]
     });
 
     //Убираем лишние элементы с карты 

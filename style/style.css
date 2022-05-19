@@ -20,7 +20,6 @@ html, body {
 }
 
 /* HEADER */
-
 .logo-list img{
     width: 170px;
 }
@@ -109,13 +108,119 @@ html, body {
     height: 53px;
 }
 
+.shopping-card p {
+    border-right: 1px solid #ffffff;
+    padding-right: 10px;
+}
+
 .shopping-card:hover {
     border: 1px solid #a4db85;
     transition: 0.3s;
 }
 
-/* PROMO */
+/* BURGER MENU */
+.hidden-menu {
+    display: none;
+    width: 50px;
+    height: 30px;
+    z-index: 4;
+    top: 33px;
+    left: 30px;
+    position: fixed;
+}
 
+.hidden-menu input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+}
+
+.hidden-menu .line {
+    background: white;
+    display: block;
+    width: 100%;
+    height: 6px;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.nav-toggle .ico-arrow {
+    background-image: url(../img/Arrow.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    margin-top: 15px;
+    position: absolute;
+}
+
+.hidden-menu .line:not(:last-child) {  
+    margin-bottom: 6px;
+}
+.hidden-menu input:checked ~ span 
+{   
+    background-color: #fff;
+    opacity: 1;
+    transform: translateY(12px) translateX(0) rotate(45deg);
+}
+
+.hidden-menu input:checked ~ span:nth-last-child(3) {
+    opacity: 0; 
+}
+
+.hidden-menu input:checked ~ span:nth-last-child(2) 
+{
+    transform: translateY(-12px) translateX(0) rotate(-45deg);
+}
+
+.header__toggle-menu {
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: -200px;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    z-index: -1;
+    overflow: hidden;
+    position: fixed;
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.hidden-menu input:checked ~ .header__toggle-menu {
+    opacity: 1;
+    overflow: visible;
+    left: -105px;
+    top: -70px;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: fixed;
+}
+.nav-toggle {
+    margin-top: 44%;
+}
+
+.header__toggle-menu ul li {
+    padding-left: 30%;
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.header__toggle-menu li a{
+    color: #F9F8FF;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.hidden-menu li a:hover {
+    font-weight: bold;
+}
+
+/* PROMO */
 .delivery {
     position: absolute;
     top: 140px;
@@ -149,7 +254,6 @@ html, body {
 }
 
 /* SLIDER */
-
 .promo .wrapper {
     position: relative;
     width: 100%;
@@ -214,7 +318,6 @@ html, body {
 }
 
 /* NAVIGATION MENU */
-
 .menu {
     background: #2a2a2a;
     height: 80px;
@@ -242,7 +345,6 @@ html, body {
     text-decoration: none;
     cursor: pointer;
     position: relative;
-    line-height: 4;
     height: 20px;
 }
 
@@ -255,6 +357,7 @@ html, body {
 	background-color: #84ca8e;
 	content: "";
 	transition: width 0.3s ease-out;
+    margin-top: 10px;
 }
 
 .nav-menu a:hover:after,
@@ -266,8 +369,11 @@ html, body {
     color: #ffffff;
 }
 
-/* CART PRODUCT */
+.nav-menu a.active {
+	color: #84ca8e;
+}
 
+/* CART PRODUCT */
 .appetizers h2 {
     color: #FFFFFF;
     font-size: 32px;
@@ -302,7 +408,6 @@ html, body {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 10px;
-    /* transition: all 0.3s ease-out; */
 }
 
 .cart-product .shopping-product {
@@ -317,7 +422,7 @@ html, body {
     height: 45px;
     display: flex;
     align-items: center;
-    padding-left: 25px;
+    padding-left: 20px;
     position: relative;
     z-index: 1;
     transition: 0.3s;
@@ -374,8 +479,33 @@ html, body {
     margin-bottom: 40px;
 }
 
-/* BLOCK CAFE */
+/* Lightbox */
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
 
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox.active img {
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+}
+/* END CART PRODUCT */
+
+/* BLOCK CAFE */
 .block-cafe .wrapper {
     background-image: url('../img/promo1.png');
     background-repeat: no-repeat;
@@ -513,14 +643,16 @@ html, body {
     height: 60px;
     margin-bottom: 20px;
     position: relative;
-    right: -13px;
+    right: -7px;
     bottom: -10px;
+    background-size: 50px 50px;
 }
 
 .block:hover .service{
     background-image: url(../img/icon-star-green.svg);
     transition: 0.3s;
 }
+/* END BLOCK CAFE */
 
 /*  BLOCK MAP */
 .block-map .wrapper {
@@ -530,7 +662,7 @@ html, body {
 /* MAP API */
 .map {
     width: 100%;
-    height: 600px;
+    height: 545px;
 }
 
 [class*="ground-pane"] {
@@ -544,7 +676,7 @@ html, body {
     box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.15);
     border-radius: 15px;
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 100px;
     display: flex;
     flex-direction: column;
@@ -715,9 +847,9 @@ html, body {
     transition: 0.2s;
     transform: scale(1.2);
 }
+/* END BLOCK MAP */
 
 /* FOOTER */
-
 .footer {
     background: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%);
 }
@@ -764,9 +896,9 @@ html, body {
     left: 20px;
     z-index: 4;
 }
+/* END FOOTER */
 
 /* Страница доставки */
-
 .general-container {
     border-top: 1px solid #808080;
 }
@@ -793,7 +925,6 @@ html, body {
 
 .schedule {
     display: flex;
-    margin-bottom: 30px;
 }
 
 .schedule-delivery {
@@ -826,13 +957,7 @@ html, body {
     color: #CFCFCF;
 }
 
-.conditions-delivery .map {
-    width: 580px;
-    height: 545px;
-}
-
 /* ACCORDION */
-
 p {
     margin-bottom: 0;
 }
@@ -844,7 +969,7 @@ ul {
 
 .row>* {
     width: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 }
 
 .accordion-flush .accordion-item .accordion-button {
@@ -855,6 +980,10 @@ ul {
 
 .accordion-flush .accordion-item {
     background-color: #2a2a2a;
+}
+
+.accordion-flush .accordion-collapse {
+    transition: 0.7s ease-in-out;
 }
 
 .accordion-body {
@@ -883,11 +1012,9 @@ ul {
 .accordion-item:last-of-type .accordion-button.collapsed {
     border-radius: 10px;
 }
-
 /* END Страница доставки */
 
 /* Страница Акции */
-
 .sale {
     margin-bottom: 100px;
 }
@@ -933,8 +1060,23 @@ ul {
 .info-sale {
     padding: 25px 25px 10px 25px;
 }
+/* END Страница Акции */
 
 /* Корзина */
+.card-widget {
+    color: #618967;
+    font-weight: bold;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .card-delete, .counter-btn {
     width: 30px;
@@ -1010,7 +1152,7 @@ ul {
 }
 
 .btn-delivery {
-    text-align: center;
+    color: #ffffff;
     font-size: 14px;
     background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
     border: none;
@@ -1020,11 +1162,6 @@ ul {
     justify-content: center;
     width: 210px;
     height: 53px;
-}
-
-.btn-delivery a {
-    color: #ffffff;
-    text-decoration: none;
 }
 
 .container-total {
@@ -1038,14 +1175,14 @@ ul {
     height: 105px;
     background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
     border-radius: 10px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 50px;
 }
 
 .total h2 {
     font-size: 20px;
-    color: #A6A7AB;
+    color: #ffffff;
 }
 
 /* Popup в корзине */
@@ -1062,7 +1199,7 @@ ul {
 }
 
 .popup.active {
-    transform: translateY(0%) scale(100%);
+    transform: translateY(0%) scale(1);
     background: rgba(0, 0, 0, 0.8);
 }
 
@@ -1131,7 +1268,7 @@ form {
 }
 
 .contact-info {
-    margin: 10px 20px 10px 20px;
+    margin: 10px 0px 10px 10px;
     background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
     border-radius: 10px;
     padding: 15px;
@@ -1276,6 +1413,26 @@ form {
 .input-pay {
     width: 155px;
     height: 53px;
+    display: flex;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 8px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-pay p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.input-pay input {
+    width: 50px;
+    border: none;
+    background: none;
 }
 
 .call-back p {
@@ -1300,6 +1457,7 @@ label {
 .checkbox a{
     color:  rgba(114, 164, 121, 1);
 }
+/* END POPUP */
 
 /* Checkbox */
 .checkbox {
@@ -1393,5 +1551,4 @@ label {
 .radio-input:checked + .radio-label::after {
     opacity: 1;
 }
-
-/* END POPUP */
+/* END Корзина */
