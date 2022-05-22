@@ -1,6 +1,5 @@
 function cardInit(){
     const cartSide = document.querySelector('.cart');
-
     const cartStorage = JSON.parse(localStorage.getItem('cart') || '[]');
 
     if (cartStorage.length) {
@@ -29,6 +28,21 @@ function cardInit(){
         });
 
         cardCounter();
+    };
+
+    if (cartStorage.length <= 0) {
+        let cardNull = document.createElement('div');
+        cardNull.classList.add('card-null');
+
+        cardNull.innerHTML = `
+        <div class="container-card-null">
+            <span class="icon-card-null"></span>
+            <h3>Корзина пуста</h3>
+            <button class="btn-card-null"><a href="../../index.html">Посмотреть меню</a></button>
+        </div>
+        `
+
+        cartSide.appendChild(cardNull);
     };
 
     // Кол-во товара в корзине
@@ -63,8 +77,7 @@ function cardInit(){
     });
 
     // Удаление
-    const btnDel = document.querySelectorAll('.card-delete');
-
+    // const btnDel = document.querySelectorAll('.card-delete');
 
     // Total
     function cardCounter() {

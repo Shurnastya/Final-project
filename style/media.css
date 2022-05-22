@@ -1,8 +1,8 @@
 /* Адаптив */
 
 @media (max-width: 1340px) {
-
   /* Страница акции */
+
   .promo-sale {
     width: 340px;
   }
@@ -106,17 +106,23 @@
   /* Страница акции */
 
   .sale .wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     justify-items: center;
+    grid-row-gap: 20px;
   }
 
   .promo-sale {
-    width: 450px;
-    height: 410px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    display: flex;
   }
 
   .promo-sale img {
-    width: 450px;
+    width: 400px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
  
 }
@@ -241,12 +247,12 @@
 
   /* Страница акции */
 
-  .promo-sale {
+  .promo-sale img {
     width: 360px;
   }
 
-  .promo-sale img {
-    width: 360px;
+  .promo-sale {
+    height: 200px;
   }
 
   /* Корзина */
@@ -358,10 +364,16 @@
     text-align: center;
   }
 
+  /* Страница акции */
+
+  .promo-sale {
+    height: 220px;
+  }
+
 }
 
 @media (max-width: 870px) {
-  /* Корзина */
+  /* Страница акции */
 
   .popup-body {
     width: 500px;
@@ -369,6 +381,23 @@
 
   .btn-delivery-card {
     flex-direction: column;
+  }
+
+  .sale .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .promo-sale {
+    width: 500px;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .promo-sale img {
+    width: 100%;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 
 }
@@ -541,17 +570,6 @@
     height: 40px;
   }
 
-   /* Страница акции */
-
-   .promo-sale {
-    width: 280px;
-    height: 455px;
-  }
-
-  .promo-sale img {
-    width: 280px;
-  }
-
   /* Корзина */
 
   .card-info {
@@ -569,15 +587,19 @@
 
   .cart {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     justify-items: center;
   }
 
   .cart .card {
-    width: 250px;
+    width: 350px;
     flex-direction: column;
     text-align: center;
+  }
+
+  .card img {
+    width: 220px;
+    height: 155px;
   }
 
   .card-delete {
@@ -727,13 +749,8 @@
   }
 
   .promo-sale {
-    width: 360px;
-    height: 410px;
+    width: 400px;
   }
-
-  .promo-sale img {
-    width: 360px;
-  }  
 
 }
 
@@ -768,7 +785,17 @@
 
   /* Корзина */
   .cart .card {
-    width: 220px;
+    width: 300px;
+  }
+
+  .container-card-null {
+    width: 280px;
+    height: 250px;
+  }
+
+  .card-null h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
   }
 
 }
@@ -809,10 +836,6 @@
 
   .cart {
     grid-template-columns: 1fr;
-  }
-
-  .cart .card {
-    width: 250px;
   }
 
   .popup-body {
@@ -933,11 +956,6 @@
 
   .promo-sale {
     width: 310px;
-    height: 435px;
-  }
-
-  .promo-sale img {
-    width: 310px;
   }
 
   /* Корзина */
@@ -1008,6 +1026,20 @@
     height: 210px;
   }
 
+  /* Страница акции */
+
+  .promo-sale p {
+    font-size: 11px;
+  }
+
+  .info-sale {
+    padding: 15px 15px 5px 15px;
+  }
+
+  .promo-sale h2 {
+    margin-bottom: 5px;
+  }
+
   /* Корзина */
 
   .total {
@@ -1015,15 +1047,20 @@
     flex-direction: column;
   }
 
+  .cart .card {
+    width: 250px;
+  }
+
+  .card img {
+    width: 170px;
+    height: 115px;
+  }
+
 }
 
 @media (max-width: 340px) {
   /* Страница акции */
   .promo-sale {
-    width: 290px;
-  }
-
-  .promo-sale img {
     width: 290px;
   }
 

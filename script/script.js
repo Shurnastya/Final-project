@@ -1,8 +1,8 @@
 import init from './modules/apimap.js';
 ymaps.ready(init);
 
-import slider from './modules/slider.js';
-slider();
+import anchor from './modules/anchor.js';
+anchor();
 
 import card from './modules/card-logic.js';
 card();
@@ -12,3 +12,6 @@ activeMenu();
 
 import lightboxImg from './modules/lightbox.js';
 lightboxImg();
+
+import slider from './modules/slider.js';
+slider();
