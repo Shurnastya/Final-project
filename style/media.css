@@ -48,6 +48,10 @@
     font-size: 18px;
   }
 
+  .contact {
+    left: 30px;
+  }
+
   /* Корзина */
 
   .popup-blocks {
@@ -82,7 +86,7 @@
   .cart-product .shopping-product {
     width: 165px;
     height: 40px;
-    padding-left: 40px;
+    padding-left: 30px;
   }
 
   .block-cafe .container {
@@ -132,7 +136,6 @@
     width: 485px;
     height: 390px;
     padding: 20px 35px;
-    left: 65px;
   }
 
   .contact h2 {
@@ -142,6 +145,10 @@
 
   .contact h4 {
     font-size: 22px; 
+  }
+
+  .contact {
+    left: 10px;
   }
 
   .number p {
@@ -337,7 +344,7 @@
     width: 450px;
     height: 380px;
     padding: 15px 25px;
-    left: 30px;
+    /* left: 10px; */
   }
 
   .location {
@@ -884,13 +891,15 @@
   }
 
   .booking {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
   }
 
   .btn-booking {
     width: 140px;
-    transform: translate(25%, 0%);
     margin-bottom: 5px;
+    margin-right: 0px;
   }
 
   .contact p {
@@ -990,6 +999,28 @@
 
   .popup-delivery {
     height: 35px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .contact {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: initial;
+  }
+
+  .block-map .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-booking {
+    width: 200px;
   }
 
 }

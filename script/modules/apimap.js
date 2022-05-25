@@ -1,6 +1,6 @@
 export default function init() {
     let map = new ymaps.Map('map', {
-        center: [53.90193115887527,27.554072732139808],
+        center: [53.901977807630395,27.554156746389456],
         zoom: 17
     });
 

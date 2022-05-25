@@ -15,7 +15,7 @@ export default function card (){
             if (localStorage.getItem('cart')) {
                 let data = JSON.parse(localStorage.getItem('cart'));
                 if (data.some(elem => elem.p === p)) {
-                    btn.innerHTML = 'Добавлено <span class="icon-card"></span>';
+                    btn.innerHTML = 'Добавлено <span class="icon-done"></span>';
                 };
             };
         };
@@ -25,6 +25,9 @@ export default function card (){
             const cart = JSON.parse(cartStorage)
             const card = { id, img, title, p, price };
             localStorage.setItem('cart', JSON.stringify([...cart, card]));
+
+            add();
+            cardWidget();
         });
 
         add();

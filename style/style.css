@@ -478,6 +478,16 @@ html, body {
     margin-bottom: 40px;
 }
 
+.icon-done {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-image: url(../img/icon-done.svg);
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    margin-left: 10px;
+}
+
 /* Lightbox */
 #lightbox {
     position: fixed;
@@ -1139,7 +1149,11 @@ ul {
     margin: 25px 0 25px 0;
 }
 
-.counter-value {
+.counter {
+    display: flex;
+}
+
+.counter-item {
     width: 40px;
     background: border-box;
     border: none;
@@ -1439,9 +1453,15 @@ form {
     color: #ffffff;
 }
 
-.quantity input {
+#quantity {
+    display: flex;
+    align-items: center;
+}
+
+#quantity input {
     border: none;
     background: none;
+    width: 30px;
 }
 
 .adress-form {
