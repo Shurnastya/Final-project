@@ -9,6 +9,7 @@ export default function card (){
         const img = elem.children[0].currentSrc;
         const title = elem.childNodes[3].childNodes[1].innerText;
         const p = elem.childNodes[3].childNodes[5].innerText;
+        let counter = 1;
         const price = elem.childNodes[3].childNodes[7].innerText;
 
         function add() {
@@ -23,7 +24,7 @@ export default function card (){
         btn.addEventListener('click', () => {
             const cartStorage = localStorage.getItem('cart') || '[]';
             const cart = JSON.parse(cartStorage)
-            const card = { id, img, title, p, price };
+            const card = { id, img, title, p, counter, price };
             localStorage.setItem('cart', JSON.stringify([...cart, card]));
 
             add();

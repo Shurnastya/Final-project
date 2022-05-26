@@ -4,7 +4,7 @@ function cardInit(){
 
     if (cartStorage.length) {
         cartStorage.forEach (elem => {
-            let { id, img, title, p, price } = elem;
+            let { id, img, title, p, counter, price } = elem;
             let newCard = document.createElement('div');
             newCard.classList.add('card');
             newCard.id = `${id}`;
@@ -17,11 +17,11 @@ function cardInit(){
             </div>
             <div class="counter">
                 <button class="counter-btn" data-direction="minus">-</button>
-                <div class="counter-item" data-counter>1</div>
+                <input type="text" value="${counter}" class="counter-value">
                 <button class="counter-btn" data-direction="plus">+</button>
             </div>
                 <h3 class="price">${price}</h3>
-                <button class="card-delete">&#10006;</button>
+                <button class="card-delete" data-id='${id}'>&#10006;</button>
             `
 
             cartSide.appendChild(newCard);
@@ -33,44 +33,79 @@ function cardInit(){
 
         btnDel.forEach(btnDel => {
 
-            btnDel.addEventListener('click', (elem) => {
+            btnDel.addEventListener('click', () => {
+                let elem = btnDel.dataset.id
                 const cartStorage = JSON.parse(localStorage.getItem('cart') || '[]');
-                const newEl = cartStorage.filter(obj => obj.id !== elem.path[1].id);
+                const newEl = cartStorage.filter(obj => obj.id !== elem);
                 localStorage.setItem('cart', JSON.stringify(newEl));
-                elem.path[1].remove();
+                btnDel.parentElement.remove();
+
+                let btnCount = document.querySelectorAll('.card-delete');
+                if (btnCount.length === 0) 
+                cardInit();
+                cardWidget();
+                cardCounter();
             });
 
         });
 
         // Счетчик
-        function counter(){
-            window.addEventListener('click', function (event) {
-    
-                if (event.target.dataset.direction === 'plus' || event.target.dataset.direction === 'minus') {
-                    const counterWrapper = event.target.closest('.counter');
-                    const counter = counterWrapper.querySelector('[data-counter]');
-    
-                    if (event.target.dataset.direction === 'plus'){
-                        counter.innerText = ++counter.innerText;
-                    };
-        
-                    if (event.target.dataset.direction === 'minus'){
-                        if (parseInt(counter.innerText) > 1){
-                            counter.innerText = --counter.innerText;
-                        };
-                    };
-                };
-    
-            });
-        };
 
-        counter();
+        const btn = document.querySelectorAll('.counter-btn');
+
+        btn.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const direction = this.dataset.direction;
+                const inp = this.parentElement.querySelector('.counter-value');
+                const currentValue = +inp.value;
+                let newValue;
+
+                if (direction === 'plus') {
+                    newValue = currentValue + 1;
+                    localStorage.setItem('cart', JSON.stringify(newValue));
+                } else {
+                    newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
+                    localStorage.setItem('cart', JSON.stringify(newValue));
+                };
+
+                inp.value = newValue;
+
+            });
+
+        });
+
+        // function counterInit(){
+        //     window.addEventListener('click', function (event) {
+        //         // тут ндо переделать логику увеличения количества товаров
+        //         if (event.target.dataset.direction === 'plus' || event.target.dataset.direction === 'minus') {
+        //             const counterWrapper = event.target.closest('.counter');
+        //             let counter = counterWrapper.querySelector('[data-counter]');
+    
+        //             if (event.target.dataset.direction === 'plus'){
+        //                 counter.innerText = ++counter.innerText;
+        //                 localStorage.setItem('cart', JSON.stringify(`${counter}`));
+        //                 // cardCounter();
+        //             };
+        
+        //             if (event.target.dataset.direction === 'minus'){
+        //                 if (parseInt(counter.innerText) > 1){
+        //                     counter.innerText = --counter.innerText;
+        //                     // cardCounter();
+        //                 };
+        //             };
+        //         };
+    
+        //     });
+        // };
+
+        // counterInit();
 
         // Итого
         function cardCounter() {
+            let cartStorage = JSON.parse(localStorage.getItem('cart'));
             const total = document.querySelector('.total').children[0];
-            let prise = cartStorage.reduce((price, item) => price += parseInt(item.price), 0);
-            total.innerText = total.innerText + ` ${prise} BYN`;
+            let prise = cartStorage.reduce((price, item) => price += parseInt(item.price), 0); //если переделать объект, то и вычисление немного измениться
+            total.innerText = `Итого: ${prise} BYN`;
         };
 
         cardCounter();
@@ -100,6 +135,7 @@ function cardInit(){
 
     // Кол-во товара в корзине
     function cardWidget(){
+        let cartStorage = JSON.parse(localStorage.getItem('cart'));
         let widget = document.querySelector('.card-widget');
         widget.innerHTML = `
         <span>${cartStorage.length}</span>
