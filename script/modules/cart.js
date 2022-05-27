@@ -61,55 +61,53 @@ function cardInit(){
                 let newValue;
 
                 if (direction === 'plus') {
-                    newValue = currentValue + 1;
-                    localStorage.setItem('cart', JSON.stringify(newValue));
+                    let cartContainer = JSON.parse(localStorage.getItem('cart') || '[]');
+                    let parentId = this.parentElement.parentElement.id
+                    newValue = currentValue +1;
+
+                    cartContainer = cartContainer.map(item => {
+                        if (item.id === parentId){
+                            item.counter = newValue;
+                        }
+
+                        return item;
+                    });
+
+                    localStorage.setItem('cart', JSON.stringify(cartContainer));
+
                 } else {
+                    let cartContainer = JSON.parse(localStorage.getItem('cart') || '[]');
+                    let parentId = this.parentElement.parentElement.id
                     newValue = currentValue - 1 > 1 ? currentValue - 1 : 1;
-                    localStorage.setItem('cart', JSON.stringify(newValue));
+
+                    cartContainer = cartContainer.map(item => {
+                        if (item.id === parentId){
+                            item.counter = newValue;
+                        }
+
+                        return item;
+                    });
+
+                    localStorage.setItem('cart', JSON.stringify(cartContainer));
+                    
                 };
 
                 inp.value = newValue;
+                cardCounter();
 
             });
 
         });
 
-        // function counterInit(){
-        //     window.addEventListener('click', function (event) {
-        //         // тут ндо переделать логику увеличения количества товаров
-        //         if (event.target.dataset.direction === 'plus' || event.target.dataset.direction === 'minus') {
-        //             const counterWrapper = event.target.closest('.counter');
-        //             let counter = counterWrapper.querySelector('[data-counter]');
-    
-        //             if (event.target.dataset.direction === 'plus'){
-        //                 counter.innerText = ++counter.innerText;
-        //                 localStorage.setItem('cart', JSON.stringify(`${counter}`));
-        //                 // cardCounter();
-        //             };
-        
-        //             if (event.target.dataset.direction === 'minus'){
-        //                 if (parseInt(counter.innerText) > 1){
-        //                     counter.innerText = --counter.innerText;
-        //                     // cardCounter();
-        //                 };
-        //             };
-        //         };
-    
-        //     });
-        // };
-
-        // counterInit();
-
         // Итого
         function cardCounter() {
             let cartStorage = JSON.parse(localStorage.getItem('cart'));
             const total = document.querySelector('.total').children[0];
-            let prise = cartStorage.reduce((price, item) => price += parseInt(item.price), 0); //если переделать объект, то и вычисление немного измениться
+            let prise = cartStorage.reduce((price, item) => (price += parseInt(item.price) *  item.counter), 0);
             total.innerText = `Итого: ${prise} BYN`;
         };
 
         cardCounter();
-
     };
 
     // Пустая корзина

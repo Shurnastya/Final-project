@@ -762,7 +762,7 @@ html, body {
 }
 
 .btn-booking {
-    width: 210px;
+    width: 200px;
     height: 60px;
     color: #FFFFFF;
     font-size: 13px;
@@ -1115,7 +1115,7 @@ ul {
     flex-direction: initial;
     align-items: center;
     justify-content: space-evenly;
-    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    background: #504B4A;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -1258,6 +1258,19 @@ ul {
     text-decoration: none;
 }
 
+.counter-value {
+    border: none;
+    width: 35px;
+    text-align: center;
+    font-size: 22px;
+    background: #504B4A;
+    color: #ffffff;
+}
+
+.counter-value:focus {
+    outline: none;
+}
+
 /* Popup в корзине */
 .popup {
     width: 100%;
@@ -1309,12 +1322,13 @@ form {
 }
 
 .popup-body input {
-    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    background:#504B4A;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     font-size: 16px;
     color: #FFFFFF;
     padding: 8px;
+    border: none;
 }
 
 .popup-body input:focus {
@@ -1438,6 +1452,7 @@ form {
     border-radius: 10px;
     padding: 0 10px 0 10px;
     margin-bottom: 15px;
+    background:#504B4A;
 }
 
 .quantity p {
@@ -1451,17 +1466,6 @@ form {
     background: none;
     border: none;
     color: #ffffff;
-}
-
-#quantity {
-    display: flex;
-    align-items: center;
-}
-
-#quantity input {
-    border: none;
-    background: none;
-    width: 30px;
 }
 
 .adress-form {
