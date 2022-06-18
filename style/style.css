@@ -9,6 +9,11 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
+body a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .site {
     background: #2a2a2a;
 }
