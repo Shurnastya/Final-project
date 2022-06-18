@@ -6,7 +6,7 @@ export default function init() {
 
     let placemark = new ymaps.Placemark([53.90210688053431,27.555478152444977], {}, {
          iconLayout: 'default#image',
-         iconImageHref: '../../img/marker.png',
+         iconImageHref: '../../img/marker.svg',
          iconImageSize: [90, 100],
          iconImageOffset: [-45, -70]
     });
